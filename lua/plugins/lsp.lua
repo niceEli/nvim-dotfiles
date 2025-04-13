@@ -31,7 +31,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "spellcheck",
+        "shellcheck",
         "harper-ls",
         "lua-language-server",
         "stylua",
