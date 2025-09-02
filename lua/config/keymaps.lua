@@ -7,4 +7,5 @@ local map = vim.keymap.set
 map("t", "<C-x>", "<C-\\><C-n>")
 map("t", "<Esc>", "<C-\\><C-n>")
 map("i", "jk", "<Esc>")
-map("n", "<A-/>", ":noh<CR>")
+map("t", "jk", "<C-\\><C-n>")
+map("n", "<A-/>", ":noh<CR>", { silent = true })
