@@ -2,8 +2,4 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-local map_key = vim.keymap.set
-
-map_key("i", "<c-space>", function()
-  vim.lsp.completion.get()
-end)
+local map = vim.keymap.set
