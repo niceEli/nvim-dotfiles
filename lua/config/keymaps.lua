@@ -5,12 +5,22 @@
 local map = vim.keymap.set
 local wk = require("which-key")
 
+local function doCompletions()
+  local cmp = require("blink.cmp")
+  if cmp.is_visible() then
+    cmp.hide()
+  else
+    cmp.show()
+  end
+end
+
 map("t", "<C-x>", "<C-\\><C-n>")
 map("t", "<Esc>", "<C-\\><C-n>")
 map("i", "jk", "<Esc>")
 map("t", "jk", "<C-\\><C-n>")
-map("n", "<A-/>", vim.cmd.noh, { desc = "Clear Search" })
+map("n", "<M-/>", vim.cmd.noh, { desc = "Clear Search" })
 map("n", "<leader>fw", vim.cmd.write, { desc = "Save File" })
+map("i", "<C-e>", doCompletions, { desc = "Toggle Completions" })
 
 -- GITHUB
 wk.add({
