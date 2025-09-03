@@ -3,7 +3,9 @@
 -- Add any additional options here
 local o = vim.opt
 
-o.shell = "zsh"
+if vim.loop.os_uname().sysname == "Windows_NT" then
+  o.shell = "zsh"
+end
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font:h14"
