@@ -61,3 +61,13 @@ wk.add({
   { "<leader>ghtn", vim.cmd.GHNextThread, desc = "Next" },
   { "<leader>ghtt", vim.cmd.GHToggleThread, desc = "Toggle" },
 })
+
+if vim.g.neovide == true then
+  vim.keymap.set({ "n" }, "<F11>", function()
+    if vim.g.neovide_fullscreen == false then
+      vim.g.neovide_fullscreen = true
+    else
+      vim.g.neovide_fullscreen = false
+    end
+  end, { silent = true })
+end
