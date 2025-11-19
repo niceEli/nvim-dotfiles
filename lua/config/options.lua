@@ -18,7 +18,7 @@ if vim.loop.os_uname().sysname == "Windows_NT" then
 end
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font:h14"
+  vim.o.guifont = "JetBrainsMono Nerd Font,Noto_Color_Emoji:h14"
 end
 
 o.wrap = true
