@@ -24,6 +24,7 @@ return {
         "cpp",
         "css",
         "dockerfile",
+        "latex",
       },
     },
   },
