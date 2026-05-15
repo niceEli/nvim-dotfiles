@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.cmd.colorscheme [[catppuccin]]
 vim.opt.termguicolors = true
 vim.opt.number = true                             -- line number

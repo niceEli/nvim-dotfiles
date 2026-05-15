@@ -1,5 +1,14 @@
 local map = vim.keymap.set
 
+local function mapgroup(type, keycode, desc)
+  return map(type, keycode, "", { desc = desc })
+end
+
+mapgroup("n", "<leader>l", "LSP")
+mapgroup("n", "<leader>ln", "Native LSP Actions")
+mapgroup("n", "<leader>b", "Buffer Management")
+mapgroup("n", "<leader>w", "Window Management")
+
 map("t", "<C-x>", "<C-\\><C-n>")
 map("t", "<Esc>", "<C-\\><C-n>")
 map("i", "jk", "<Esc>")
@@ -7,6 +16,7 @@ map("t", "jk", "<C-\\><C-n>")
 map("n", "<M-/>", vim.cmd.noh, { desc = "Clear Search" })
 map("n", "<leader>c", vim.cmd.noh, { desc = "Clear Search" })
 map("n", "<leader>fw", vim.cmd.write, { desc = "Save File" })
+map("n", "<leader>bw", vim.cmd.write, { desc = "Save Buffer" })
 map("n", "<leader>bd", vim.cmd.bdelete, { desc = "Delete Buffer" })
 map("n", "<leader>wd", vim.cmd.quit, { desc = "Delete Split" })
 map("n", "<leader>qq", vim.cmd.quitall, { desc = "Close nvim" })
