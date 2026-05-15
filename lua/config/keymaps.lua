@@ -57,11 +57,11 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
-vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = 'Telescope help tags' })
+map('n', '<leader>ff', require('telescope.builtin').find_files, { desc = 'Telescope find files' })
+map('n', '<leader><leader>', require('telescope.builtin').find_files, { desc = 'Telescope find files' })
+map('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = 'Telescope live grep' })
+map('n', '<leader>fb', require('telescope.builtin').buffers, { desc = 'Telescope buffers' })
+map('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = 'Telescope help tags' })
 
 -- Neovide
 if vim.g.neovide == true then

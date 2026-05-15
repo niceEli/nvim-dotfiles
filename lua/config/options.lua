@@ -71,7 +71,8 @@ vim.opt.splitbelow = true                            -- horizontal splits go bel
 vim.opt.splitright = true                            -- vertical splits go right
 
 vim.opt.wildmenu = true                              -- tab completion
-vim.opt.wildmode = "longest:full,full"               -- complete longest common match, full completion list, cycle through with Tab
+vim.opt.wildmode =
+"longest:full,full"                                  -- complete longest common match, full completion list, cycle through with Tab
 vim.opt.diffopt:append("linematch:60")               -- improve diff display
 vim.opt.redrawtime = 10000                           -- increase neovim redraw tolerance
 vim.opt.maxmempattern = 20000                        -- increase max memory
@@ -83,3 +84,21 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = true,
 })
+
+if vim.loop.os_uname().sysname == "Windows_NT" then
+  if vim.fn.executable("zsh") == 1 then
+    vim.o.shell = "zsh"
+  elseif vim.fn.executable("nu") == 1 then
+    vim.o.shell = "nu"
+  elseif vim.fn.executable("bash") == 1 then
+    vim.o.shell = "bash"
+  elseif vim.fn.executable("pwsh") == 1 then
+    vim.o.shell = "pwsh"
+  elseif vim.fn.executable("powershell") == 1 then
+    vim.o.shell = "powershell"
+  end
+end
+
+if vim.g.neovide == true then
+  vim.o.guifont = "Google Sans Code NF,Noto_Color_Emoji:h12"
+end
