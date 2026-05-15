@@ -50,6 +50,41 @@ map("n", "<leader>bf", function()
     timeout_ms = 5000,
   })
 end, { desc = "Format buffer" })
+map("n", "<leader>lf", function()
+  vim.lsp.buf.format({
+    async = true,
+    timeout_ms = 5000,
+  })
+end, { desc = "Format buffer" })
+
+-- LSP
+
+map("n", "<leader>ld", require("telescope.builtin").lsp_document_symbols, { desc = "LSP: Document Symbols" })
+map("n", "<leader>lnd", vim.lsp.buf.document_symbol, { desc = "LSP: Document Symbols (NATIVE)" })
+
+map("n", "<leader>lD", require("telescope.builtin").lsp_definitions, { desc = "LSP: Goto Definitions" })
+map("n", "<leader>lnD", vim.lsp.buf.definition, { desc = "LSP: Goto Definitions (NATIVE)" })
+
+map("n", "<leader>lh", vim.lsp.buf.signature_help, { desc = "LSP: Symbol Help" })
+
+map("n", "<leader>lr", require("telescope.builtin").lsp_references, { desc = "LSP: Goto References" })
+map("n", "<leader>lnr", vim.lsp.buf.references, { desc = "LSP: Goto References (NATIVE)" })
+
+map("n", "<leader>lt", require("telescope.builtin").lsp_type_definitions, { desc = "LSP: Goto Type Definition" })
+map("n", "<leader>lnt", vim.lsp.buf.type_definition, { desc = "LSP: Goto Type Definition (NATIVE)" })
+
+map("n", "<leader>li", require("telescope.builtin").lsp_implementations, { desc = "LSP: Goto Implementations" })
+map("n", "<leader>lni", vim.lsp.buf.implementation, { desc = "LSP: Goto Implementations (NATIVE)" })
+
+map("n", "<leader>lws", require("telescope.builtin").lsp_workspace_symbols, { desc = "LSP: Workspace Symbols" })
+map("n", "<leader>lnws", vim.lsp.buf.workspace_symbol, { desc = "LSP: Workspace Symbols (NATIVE)" })
+
+map("n", "<leader>la", vim.lsp.buf.code_action, { desc = "LSP: Code Actions" })
+map("n", "<leader>lf", vim.lsp.buf.format, { desc = "LSP: Format Buffer" })
+map("n", "<leader>lR", vim.lsp.buf.rename, { desc = "LSP: Rename Symbol" })
+
+map("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation" })
+map("n", "<leader>lk", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation" })
 
 -- Moving around splits
 map("n", "<C-h>", "<C-w>h")
