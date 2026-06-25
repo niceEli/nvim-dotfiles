@@ -38,6 +38,22 @@ map("n", "<C-S-l>", ":vertical resize +2<CR>", { desc = "Increase window width" 
 map("n", "<C-S-j>", ":resize -2<CR>", { desc = "Decrease window height" })
 map("n", "<C-S-k>", ":resize +2<CR>", { desc = "Increase window height" })
 
+map("n", "<C-M-h>", function()
+  require("lib.swap-buffers").swap_buffers("h")
+end, { desc = "Swap buffer left" })
+
+map("n", "<C-M-j>", function()
+  require("lib.swap-buffers").swap_buffers("j")
+end, { desc = "Swap buffer down" })
+
+map("n", "<C-M-k>", function()
+  require("lib.swap-buffers").swap_buffers("k")
+end, { desc = "Swap buffer up" })
+
+map("n", "<C-M-l>", function()
+  require("lib.swap-buffers").swap_buffers("l")
+end, { desc = "Swap buffer right" })
+
 map("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
 map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
