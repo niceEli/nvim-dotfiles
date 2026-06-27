@@ -116,6 +116,8 @@ map("n", "<leader>lR", vim.lsp.buf.rename, { desc = "LSP: Rename Symbol" })
 map("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation" })
 map("n", "<leader>lk", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation" })
 
+map("n", "<leader>lp", require('telescope.builtin').diagnostics, { desc = "LSP: Show Problems" })
+
 -- Moving around splits
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
