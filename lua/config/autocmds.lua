@@ -4,7 +4,7 @@ local mkcmd = vim.api.nvim_create_autocmd
 mkcmd("TextYankPost", {
 	group = augroup,
 	callback = function()
-		vim.hl.on_yank()
+		vim.hl.hl_op {higroup='IncSearch', timeout=300}
 	end,
 })
 
