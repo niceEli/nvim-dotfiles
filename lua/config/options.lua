@@ -83,17 +83,18 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-if vim.loop.os_uname().sysname == "Windows_NT" then
-  if vim.fn.executable("zsh") == 1 then
-    vim.o.shell = "zsh"
-  elseif vim.fn.executable("nu") == 1 then
-    vim.o.shell = "nu"
-  elseif vim.fn.executable("bash") == 1 then
-    vim.o.shell = "bash"
-  elseif vim.fn.executable("pwsh") == 1 then
-    vim.o.shell = "pwsh"
-  elseif vim.fn.executable("powershell") == 1 then
-    vim.o.shell = "powershell"
+local shells = {
+  "nu",
+  "zsh",
+  "pwsh",
+  "powershell",
+  "bash",
+}
+
+for _, shell in ipairs(shells) do
+  if vim.fn.executable(shell) == 1 then
+    vim.opt.shell = shell
+    break
   end
 end
 
