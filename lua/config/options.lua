@@ -34,7 +34,7 @@ vim.opt.synmaxcol = 300                           -- syntax highlighting limit
 
 local undodir = vim.fn.expand("~/.vim/undodir")
 if
-    vim.fn.isdirectory(undodir) == 0 -- create undodir if nonexistent
+  vim.fn.isdirectory(undodir) == 0 -- create undodir if nonexistent
 then
   vim.fn.mkdir(undodir, "p")
 end
