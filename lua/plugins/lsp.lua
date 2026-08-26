@@ -30,7 +30,7 @@ return {
         "kotlin_language_server",
         "java_language_server",
         "docker_language_server",
-        "yamllint"
+        "yaml_language_server"
       })
     end,
   },
