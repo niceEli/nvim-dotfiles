@@ -28,7 +28,9 @@ return {
         "ts_ls",
         "nil_ls",
         "kotlin_language_server",
-        "java_language_server"
+        "java_language_server",
+        "docker_language_server",
+        "yamllint"
       })
     end,
   },
