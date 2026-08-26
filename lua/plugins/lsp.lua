@@ -17,6 +17,19 @@ return {
           },
         },
       })
+      vim.lsp.enable({
+        "clangd",
+        "gopls",
+        "lua_ls",
+        "pyright",
+        "rust_analyzer",
+        "zls",
+        "roslyn",
+        "ts_ls",
+        "nil_ls",
+        "kotlin_language_server",
+        "java_language_server"
+      })
     end,
   },
   {
