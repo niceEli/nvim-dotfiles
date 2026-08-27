@@ -31,7 +31,8 @@ return {
         "java_language_server",
         "docker_language_server",
         "yamlls",
-        "bashls"
+        "bashls",
+        "hls"
       })
     end,
   },
